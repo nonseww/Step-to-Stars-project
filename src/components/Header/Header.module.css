@@ -1,0 +1,63 @@
+header{
+    display: flex; 
+    margin-top: 0px;
+    width: 100%;
+    height: 12vh;
+    border-bottom: solid #1d036c 0.3vh; 
+    position: absolute;   
+    background: none;
+}
+
+.headerContainer{
+    display: flex;
+    margin: auto; 
+    margin-top: 0px; 
+    width: 100%;
+    background: #fff;
+    padding-bottom: 0px;
+    background-clip: content-box;
+    height: 100%;
+    background: inherit;
+    clear:both;
+    position: relative;
+}
+
+.caveat_headerText {
+    display: flex;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-left: 4vw;
+    align-content: center;
+    background: inherit;
+    color:whitesmoke;  
+    font-size: max(4vh, 3.3vw);
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    align-items: center;
+}
+
+.headerPhotoContainer{
+    display: inline; 
+    float: right; 
+    height: 80%;
+    width: 50px;
+    margin-left: auto;
+    align-content: center;
+    background: inherit;
+    margin-top: 10%; 
+    margin-bottom: 10%;
+    flex-direction: row;
+}
+
+.headerPhoto{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.headerHrefStyle{
+    text-decoration: none;
+    color: inherit; 
+}

@@ -1,0 +1,268 @@
+.headerLogo{
+  width: 100%; 
+  height: 100%;
+  background: url("../Pictures/default_avatar.jpg");
+  border-radius: 100px;
+  display: block;
+  object-fit: contain;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  .nav-area {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  /* .logo {
+    text-decoration: none;
+    font-size: 25px;
+    color: inherit;
+    margin-right: 20px;
+  } */
+  
+  /* menu on desktop */
+  .desktop-nav .menus {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .desktop-nav .menu-items {
+    position: relative;
+  }
+  
+  .desktop-nav .menu-items a {
+    display: block;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke; 
+    align-content: center;
+    margin-left: 2vw;
+    font-size: max(2.9vh, 2.3vw);
+  }
+  
+  .desktop-nav .menu-items button {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .desktop-nav button span {
+    margin-left: 3px;
+  }
+  
+  .desktop-nav .menu-items > a,
+  .desktop-nav .menu-items button {
+    text-align: left;
+    padding: 0.7rem 0.7rem;
+  }
+  
+  .desktop-nav .menu-items a:hover,
+  .desktop-nav .menu-items button:hover {
+    background-color: #5f30fa;
+  }
+  
+  .desktop-nav .arrow::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.28em;
+    vertical-align: 0.09em;
+    border-top: 0.42em solid;
+    border-right: 0.32em solid transparent;
+    border-left: 0.32em solid transparent;
+  }
+  
+  .desktop-nav .dropdown {
+    position: absolute;
+    right: 0;
+    left: auto;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+      0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    z-index: 9999;
+    width: max(18vw, 20vh);
+    height: auto;
+    padding: 0.5rem 0;
+    color: whitesmoke;
+    list-style: none;
+    background: linear-gradient(#2A00B7, #3f006c);
+    border-radius: 0.5rem;
+    border: 0.05vw solid black; 
+    display: none;
+  }
+  
+  .desktop-nav .dropdown.show {
+    display: block;
+  }
+  
+  .desktop-nav .dropdown .dropdown-submenu {
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+  
+  .mobile-nav {
+    display: none;
+  }
+  
+  /* menu on mobile */
+  @media screen and (max-width: 700px) {
+    .nav-area {
+      justify-content: space-between;
+    }
+  
+    .desktop-nav {
+      display: none;
+      text-align: right;
+    }
+  
+    .mobile-nav {
+      display: block;
+      align-items: center;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .mobile-nav .mobile-nav__menu-button {
+      color: inherit;
+      font-size: inherit;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+      position: fixed;
+    }
+    
+    .mobile-nav .menus {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        height: 100%;
+    }
+  
+    .mobile-nav .menu-items a {
+        display: block;
+        text-decoration: none;
+        /* font-family: "Reddit Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal; */
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: whitesmoke; 
+        align-content: center;
+        margin-left: 2vw;
+        font-size: 2.4vw;
+        padding-bottom: 0.5vh;
+    }
+  
+    .mobile-nav .menu-items button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: inherit;
+      font-size: inherit;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      width: 100%;
+    }
+  
+    .mobile-nav .menu-items > a,
+    .mobile-nav .menu-items button {
+        display: block;
+        text-decoration: none;
+        /* font-family: "Reddit Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal; */
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: whitesmoke; 
+        align-content: center;
+        font-size: max(3.8vh, 3.8vw);
+    }
+  
+    .mobile-nav .menu-items a:hover,
+    .mobile-nav .menu-items button:hover {
+      background-color: #5f30fa;
+    }
+  
+    .mobile-nav .arrow::after {
+      content: "";
+      display: inline-block;
+      margin-left: 1.2em;
+      vertical-align: 0.09em;
+      border-top: 0.42em solid;
+      border-right: 0.32em solid transparent;
+      border-left: 0.32em solid transparent;
+    }
+    .mobile-nav .arrow-close::after {
+      content: "";
+      display: inline-block;
+      margin-left: 1.2em;
+      vertical-align: 0.09em;
+      border-bottom: 0.42em solid;
+      border-right: 0.32em solid transparent;
+      border-left: 0.32em solid transparent;
+    }
+  
+    .mobile-nav .dropdown {
+        position: absolute;
+        right: 0;
+        left: auto;
+        box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+          0 4px 6px -2px rgba(71, 63, 79, 0.16);
+        z-index: 9999;
+        width: 48vw;
+        padding: 0.5rem 0;
+        color: whitesmoke;
+        list-style: none;
+        background: linear-gradient(#2A00B7, #3f006c);
+        border-radius: 0.5rem;
+        border: 0.05vw solid black; 
+        display: none;
+    }
+  
+    .mobile-nav .dropdown.show {
+      display: block;
+    }
+  }
+  
+  /* page content */
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  #error-page {
+    /* center content on the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+  }

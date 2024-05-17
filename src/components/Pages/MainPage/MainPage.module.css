@@ -1,0 +1,65 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto; 
+    margin-top: 0px; 
+    width: 100%;
+    background: #fff;
+    background-clip: content-box;
+    height: 100vh;
+    height: auto;
+    /* margin-bottom: min(13vw, 13vh); */
+}
+
+.subInfoContainer{
+    flex-direction: column;
+    margin-top: 3%; 
+    display: flex;
+    width: 100%;
+    height: auto; 
+}
+
+.subTitleContainer{
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+    margin-left: auto;
+    padding-right: 4vw;
+    padding-left: 4vw;
+
+    @media screen and (max-width: 1020px) {
+        margin-left: none;
+    }
+}
+
+.subStarTitle{
+    color: black; 
+    font-family: "Platypi", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: max(5.5vh, 4.7vw); 
+
+    @media screen and (max-width: 1020px) {
+        text-align: center;
+    }
+}
+
+.BoxesContainer{
+    display: flex;
+    margin-top: 4vw;
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    flex-direction: row;
+    gap: 3vw; 
+    margin-bottom: min(10vw, 10vh);
+
+    @media screen and (max-width: 1020px) {
+        flex-direction: column;
+        gap: 3vh; 
+        margin-top: 5vh;
+    }
+}
