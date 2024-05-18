@@ -15,10 +15,11 @@ const MobileProfile = () => {
     return(
         <div className={classes.mobileProfileContainer}>
             <div className={classes.topContainer}>
+
                 <div className={classes.imgContainer}>
 
                 <img src={defaultImage} alt="" 
-                    style={{height: "100%", width: "100%", borderRadius: "300px"}}>
+                    style={{height: "100%", width: "100%"}}>
                 </img>
 
                 </div>
@@ -28,14 +29,12 @@ const MobileProfile = () => {
                     <div> {`${userData[1].value}`} </div>
                 </div>
 
-            </div>
-
-            <div style={{width: "100%", height: "auto"}}>
-                <div className={classes.settingsButtonContainer1000px}>
-                        <a role="buttton" className={classes.settingsButton} onClick={handleClick}>
-                            <img src={SettingsIcon} alt="" style={{width: "100%", height: "100%"}}></img>
-                        </a> 
+                <div className={classes.settingsButtonContainer}>
+                    <a role="buttton" className={classes.settingsButton} onClick={handleClick}>
+                        <img src={SettingsIcon} alt="" style={{width: "100%", height: "100%"}}></img>
+                    </a> 
                 </div>
+
             </div>
 
             <div className={classes.userInfoContainer}>

@@ -3,6 +3,7 @@ body{
     min-height: 100vh;
     height: auto;
     background: linear-gradient(#2A00B7, #42006C);
+    width: 100%;
 }
 
 /* html {

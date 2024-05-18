@@ -26,7 +26,7 @@ const UploadFile = () => {
         }
 
         .btnText{
-            transform: translateY(12%); 
+            transform: translateY(13%); 
         }
     `; 
 

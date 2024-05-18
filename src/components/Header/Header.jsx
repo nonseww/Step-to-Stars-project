@@ -27,7 +27,7 @@ export default function Header() {
                     <a className={classes.headerHrefStyle} href="/">Step To Stars</a>
                 </div>
 
-                {(width < breakpoint) ? <MobileNavbar /> : <DesktopNavbar />}
+                {(width <= breakpoint) ? <MobileNavbar /> : <DesktopNavbar />}
 
             </div>
         </header>

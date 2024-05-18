@@ -18,18 +18,12 @@ const DesktopProfile = () => {
             <div className={classes.imgContainer}>
 
                 <img className={classes.logo} src={defaultImage} alt="" 
-                    style={{height: "100%", width: "100%", borderRadius: "300px"}}>
+                    style={{height: "100%", width: "100%"}}>
                 </img>
 
             </div>
 
             <div className={classes.infoContainer}>
-
-                <div className={classes.settingsButtonContainer1000px}>
-                        <a role="buttton" className={classes.settingsButton} onClick={handleClick}>
-                            <img src={SettingsIcon} alt="" style={{width: "100%", height: "100%"}}></img>
-                        </a>
-                </div>
 
                 <div className={classes.usernameContainer}>
                     {`${userData[0].value}  ${userData[1].value}`}
@@ -45,11 +39,11 @@ const DesktopProfile = () => {
 
             </div>
 
-            <div className={classes.settingsButtonContainer1080px}>
+            <div className={classes.settingsButtonContainer}>
                     <a role="buttton" className={classes.settingsButton} onClick={handleClick}>
                         <img src={SettingsIcon} alt="" style={{width: "100%", height: "100%"}}></img>
                     </a>
-                </div>
+            </div>
         </div>
     )
 }
