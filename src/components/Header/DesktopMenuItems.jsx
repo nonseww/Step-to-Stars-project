@@ -26,7 +26,7 @@ const MobileMenuItems = ({items}) => {
             {items.submenu ? (
             <>
                 <a role="button" aria-haspopup="menu" aria-expanded={dropdown ? "true" : "false"} 
-                style={{display: "block", overflow: "hidden", width: "max(5.3vh, 5.3vw)", height: "max(5.3vh, 5.3vw)",
+                style={{display: "block", overflow: "hidden", width: "max(6vh, 6vw)", height: "max(6vh, 6vw)",
                 padding: "max(1vw, 1vh)"}}
                     onClick={() => setDropdown((prev) => !prev)}>
 

@@ -5,7 +5,7 @@ import "./dropdownMenu.css";
 import classes from './Header.module.css'; 
 
 export default function Header() {
-    const breakpoint = 700; 
+    const breakpoint = 800; 
 
     const[width, setWidth] = useState(window.innerWidth); 
 

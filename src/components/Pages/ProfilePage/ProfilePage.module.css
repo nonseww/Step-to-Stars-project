@@ -18,9 +18,8 @@
     margin-top: max(8vh, 8vw);
     margin-left: 4%;
     flex-direction: row;
-    gap: 10%; 
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 800px) {
         display: none;
     }
 }
@@ -36,9 +35,17 @@
     display: flex;
     flex-direction: column; 
     height: auto;
-    width: 50vw;
     gap: 4%; 
-    margin-top: max(2vh, 2.2vw);
+    margin-left: 8vw;
+    margin-right: 4vw;
+
+    @media screen and (min-width: 1000px) {
+        width: calc(100% -  0.65 * min(60vw, 60vh) - 4% - 8vw - max(3vh, 3vw) - 10vw);
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: calc(100% -  0.65 * min(60vw, 60vh) - 4% - 8vw);
+    }
 }
 
 .usernameContainer{
@@ -49,7 +56,7 @@
     color: #3131d1; 
     font-weight: 600;
     font-size: max(3.6vh, 4vw); 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 800px) {
         text-align: center; 
     }
 }
@@ -60,8 +67,9 @@
     width: auto;
     height: auto;
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 800px) {
         margin-left: 5%;
+        margin-top: max(2vh, 2vw);
     }
 }
 
@@ -78,12 +86,45 @@
 
 .nameString{
     color: #747474; 
-    font-size: max(2.2vh, 2.2vw);
+    font-size: max(2vh, 2vw);
 }
 
 .valueString{
     color: #3131d1; 
-    font-size: max(2.2vh, 2.2vw);
+    font-size: max(2vh, 2vw);
+}
+
+.settingsButtonContainer1000px{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .settingsButtonContainer1000px{
+        display: flex;
+        height: max(3vh, 3vw); 
+        width: max(3vh, 3vw);
+        margin-left: auto;
+        margin-right: 2vw;
+    }
+}
+
+.settingsButtonContainer1080px{
+    display: none;
+}
+
+@media screen and (min-width: 1000px){
+    .settingsButtonContainer1080px{
+        display: flex;
+        height: max(3vh, 3vw); 
+        width: max(3vh, 3vw);
+        margin-right: auto;
+        margin-top: min(2vh, 2vw);
+    }
+}
+
+.settingsButtonContainer a{
+    width: auto;
+    height: auto;
 }
 
 .topContainer{
@@ -94,7 +135,7 @@
     display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
     .mobileProfileContainer{
         display: flex;
@@ -102,8 +143,7 @@
         height: auto;
         background-clip: content-box;
         margin-top: 2%;
-        flex-direction: column;
-        gap: 8%; 
+        flex-direction: column; 
     }
 
     .topContainer{
