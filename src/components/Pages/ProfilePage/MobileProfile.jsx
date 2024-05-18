@@ -17,7 +17,7 @@ const MobileProfile = () => {
             <div className={classes.topContainer}>
                 <div className={classes.imgContainer}>
 
-                <img className={classes.logo} src={defaultImage} alt="" 
+                <img src={defaultImage} alt="" 
                     style={{height: "100%", width: "100%", borderRadius: "300px"}}>
                 </img>
 

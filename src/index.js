@@ -10,7 +10,7 @@ import DictPage from './components/Pages/DictPage/DictPage';
 import TasksPage from './components/Pages/TasksPage/TasksPage';
 import ChatPage from './components/Pages/ChatPage/ChatPage';
 import ProfilePage from './components/Pages/ProfilePage/ProfilePage';
-import SettingProfilePage from './components/Pages/ProfilePage/SettingProfilePage';
+import SettingProfilePage from './components/Pages/SettingProfilePage/SettingProfilePage';
 
 const router = createBrowserRouter([
   {
