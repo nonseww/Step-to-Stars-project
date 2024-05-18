@@ -1,10 +1,10 @@
 import classes from "./Footer.module.css"; 
 
-const AboutUs = () => {
+const Contacts = () => {
     return(
         <div className={classes.navbar}>
-            <div className={classes.title} style={{textAlign: 'center'}}>
-                About us
+            <div className={classes.title}>
+                Contacts
             </div>
 
             <div className={classes.navColumn}>
@@ -14,4 +14,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs; 
+export default Contacts; 
