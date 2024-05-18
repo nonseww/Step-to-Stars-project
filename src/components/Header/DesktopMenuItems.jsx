@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown"; 
+import defaultImage from "../Pictures/default_avatar.png"; 
 
 const MobileMenuItems = ({items}) => {
     const [dropdown, setDropdown] = useState(false); 
@@ -29,7 +30,9 @@ const MobileMenuItems = ({items}) => {
                 padding: "max(1vw, 1vh)"}}
                     onClick={() => setDropdown((prev) => !prev)}>
 
-                    <img className="headerLogo"></img>{""}
+                    <img className="headerLogo" src={defaultImage} alt=""
+                    style={{height: "100%", width: "100%", borderRadius: "300px"}}>
+                    </img>{""}
 
                 </a>
 

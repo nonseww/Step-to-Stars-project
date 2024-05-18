@@ -122,7 +122,6 @@
     line-height: 1.5;
     text-align: center;
     font-weight: 600;
-    color: whitesmoke !important; 
 
     @media screen and (max-width: 1020px) {
         text-align: left;

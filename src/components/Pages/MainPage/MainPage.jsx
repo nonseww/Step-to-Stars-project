@@ -22,20 +22,20 @@ export default function MainPage() {
                     </div>
 
                     <div className={classes.BoxesContainer}>
-                        <StarboxContainer letter="S" backgroundColorAll="#Ffedea" ContainerBorderColor="red" backgroundColorLetter="#fab88c" 
-                            titleText="Situation" titleColor="red" text={situationText}>
+                        <StarboxContainer letter="S" backgroundColorAll="#ffedea" ContainerBorderColor="#ef6e5a" backgroundColorLetter="#fdb4a8" 
+                            titleText="Situation" titleColor="#ef6e5a" text={situationText}>
                         </StarboxContainer>
 
-                        <StarboxContainer letter="T" backgroundColorAll="#feecf5" ContainerBorderColor="orange" backgroundColorLetter="#fbed9a" 
-                            titleText="Tasks" titleColor="orange" text={tasksText}>
+                        <StarboxContainer letter="T" backgroundColorAll="#feecf5" ContainerBorderColor="#db6da4" backgroundColorLetter="#fcb7d9" 
+                            titleText="Tasks" titleColor="#db6da4" text={tasksText}>
                         </StarboxContainer>
 
-                        <StarboxContainer letter="A" backgroundColorAll="#cae0fa" ContainerBorderColor="blue" backgroundColorLetter="#a5e8fb" 
-                            titleText="Action" titleColor="blue" text={actionText}>
+                        <StarboxContainer letter="A" backgroundColorAll="#eaeaff" ContainerBorderColor="#7979ee" backgroundColorLetter="#c4c4fe" 
+                            titleText="Action" titleColor="#7979ee" text={actionText}>
                         </StarboxContainer>
 
-                        <StarboxContainer letter="R" backgroundColorAll="#CCCCFF" ContainerBorderColor="purple" backgroundColorLetter="#c6d2ff" 
-                           titleText="Result" titleColor="purple" text={resultText}>
+                        <StarboxContainer letter="R" backgroundColorAll="#d6e8ff" ContainerBorderColor="#4b95fc" backgroundColorLetter="#bcd7fd" 
+                           titleText="Result" titleColor="#4b95fc" text={resultText}>
                         </StarboxContainer>
 
                     </div>

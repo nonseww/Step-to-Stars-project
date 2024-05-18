@@ -20,3 +20,10 @@ export const ItemsData = [
         url: "/"
     }
 ]; 
+
+export const AboutUsData = [
+    {
+        title: "", 
+        url: "/"
+    }
+]

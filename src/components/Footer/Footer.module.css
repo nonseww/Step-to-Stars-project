@@ -5,13 +5,14 @@
     margin-bottom: min(10vw, 10vh);
     display: flex;
     flex-direction: row;
-    gap: 5%; 
+    gap: 2%; 
+    background-clip: content-box;
 }
 
 .navbar{
     display: flex;
     height: 100%;
-    width: 20%;
+    width: auto;
     margin-left: 4%;
     margin-right: 3%;
     margin-top: 2%;

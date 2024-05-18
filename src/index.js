@@ -9,6 +9,7 @@ import Register from "./components/Pages/Register/Register";
 import DictPage from './components/Pages/DictPage/DictPage';
 import TasksPage from './components/Pages/TasksPage/TasksPage';
 import ChatPage from './components/Pages/ChatPage/ChatPage';
+import ProfilePage from './components/Pages/ProfilePage/ProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/chat", 
     element: <ChatPage />
+  }, 
+  {
+    path: "/profile", 
+    element: <ProfilePage />
   }
 ]); 
 

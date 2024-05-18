@@ -5,7 +5,7 @@ export const MobileMenuItemData = [
         submenu: [
         {
             title: "Your profile", 
-            url: "/"
+            url: "/profile"
         }, 
         {
             title: "Dictionary", 
