@@ -1,0 +1,153 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    margin: auto; 
+    margin-top: 0px; 
+    width: 100%;
+    background: #fff;
+    background-clip: content-box;
+    min-height: max(55vw, 55vh);
+    height: auto;
+}
+
+.profileContainer{
+    display: flex;  
+    width: 100%;
+    height: auto;
+    background-clip: content-box;
+    margin-top: max(8vh, 8vw);
+    margin-left: 4%;
+    flex-direction: row;
+    gap: 4vw; 
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+}
+
+.imgContainer{
+    margin-top: 2%;
+    width: min(45vw, 50vh);
+    height: min(45vw, 50vh);
+    display: block;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column; 
+    height: auto;
+    gap: 4%; 
+    margin-left: min(8vw, 1vh);
+    margin-right: 2vw;
+    width: calc(100% -  4% - min(45vw, 50vh));
+}
+
+.usernameContainer{
+    width: calc(100% - 4% - min(45vw, 50vh));
+    height: auto;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3131d1; 
+    font-weight: 600;
+    font-size: max(4vh, 4.4vw); 
+    @media screen and (max-width: 800px) {
+        text-align: center; 
+        justify-self: center;
+        align-self: center;
+        font-size: 7vw;
+    }
+}
+
+.userInfoContainer{
+    display: flex;
+    flex-direction: column; 
+    width: auto;
+    height: auto;
+
+    @media screen and (max-width: 800px) {
+        margin-left: 5%;
+        margin-top: max(2vh, 2vw);
+    }
+}
+
+.infoString{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.3vh;
+}
+
+.nameString{
+    color: #747474; 
+    font-size: max(2vh, 2.2vw);
+
+    @media screen and (max-width: 800px) {
+        font-size: max(2vh, 3vw);
+    }
+}
+
+.valueString{
+    color: #3131d1; 
+    font-size: max(2vh, 2.2vw);
+
+    @media screen and (max-width: 800px) {
+        font-size: max(2vh, 3vw);
+    }
+}
+
+.settingsButtonContainer{
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    height: max(3vh, 3vw); 
+    width: max(3vh, 3vw);
+    right: 8vw;
+}
+
+.settingsButtonContainer a{
+    width: auto;
+    height: auto;
+}
+
+.topContainer{
+    display: none;
+}
+
+.mobileProfileContainer{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    .mobileProfileContainer{
+        display: flex;
+        width: 100%;
+        height: auto;
+        background-clip: content-box;
+        margin-top: 2%;
+        flex-direction: column; 
+    }
+
+    .topContainer{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        background-clip: content-box;
+        /* justify-content: center;
+        align-items: center; */
+        position: relative;
+        gap: 3%; 
+        margin-left: 5%;
+    }   
+
+    .settingsButtonContainer{
+        right: 5vw;
+        top: 3vh; 
+    }
+
+}

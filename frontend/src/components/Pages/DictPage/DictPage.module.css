@@ -1,0 +1,69 @@
+.mainContainer{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    min-height: max(80vh, 80vw);
+    height: auto;
+    background: #f7f7f7;
+    gap: max(4vh, 4vw);     
+}
+
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: max(0.5vh, 0.5vw);
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1818d2; 
+    font-weight: 600;
+    font-size: max(6vh, 5.5vw);
+    text-align: center;
+}
+
+.infoTable{
+    width: 95%; 
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+table{
+    table-layout: fixed;
+}
+
+thead{
+    width: 100%;
+    background-color: #3838fb;
+    height: max(6vw, 6vh);
+    font-weight: normal;
+}
+
+.tr{
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke; 
+    font-weight: 400;
+    font-size: max(1.4vh, 2vw);
+    text-align: center;
+    height: auto;
+}
+
+td{
+    height: max(5vh, 5vw);
+    width: 100%;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;  
+    font-weight: 400;
+    font-size: max(1.5vh, 2vw);
+    text-align: center;
+    background: white;
+}
+
+td:nth-child(odd) {
+    background-color: #dfdfff;
+}
