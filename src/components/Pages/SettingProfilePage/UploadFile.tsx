@@ -6,14 +6,14 @@ const UploadFile = () => {
         .btn{
             display: inline-block; 
             width: 100%;
-            height: max(4.5vh, 4.5vw);
-            border-radius: 18px;
+            height: max(5vh, 4.5vw);
+            border-radius: 20vw;
             background: #3b3bfb;
             border: solid min(0.4vh, 0.4vw) #1818d2;
             text-decoration: none;
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: whitesmoke; 
-            font-weight: 400;
+            font-weight: 600;
             font-size: max(2.5vh, 2.5vw); 
             display: block; 
             text-align: center; 
@@ -26,7 +26,7 @@ const UploadFile = () => {
         }
 
         .btnText{
-            transform: translateY(13%); 
+            transform: translateY(18%); 
         }
     `; 
 

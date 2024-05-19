@@ -15,7 +15,7 @@ const DesktopSetting = () => {
     }
 
     const handlePhotoClick = () => {
-        console.log("click"); 
+        console.log("delete"); 
     }
     return(
         <div className={classes.profileContainer}>
@@ -44,16 +44,17 @@ const DesktopSetting = () => {
 
                 <div className={classes.title}>Settings</div>
 
-                <form id="settings" className={classes.labelsContainer}>
+                <form id="desktopSettings" className={classes.labelsContainer}>
 
                     {userData.map((title, index) => {
-                        return (blacklist.indexOf(title.name) > -1 ? null : <StyledInput items={title} key={index} />)
+                        return (blacklist.indexOf(title.name) > -1 ? null : <StyledInput items={title} key={index} 
+                            child="desktopSetting" />)
                     })}
 
                     <div className={classes.submitContainer}>
 
-                        <input form="settings" className={classes.btn} type="submit" value="Save"></input>
-                        <button className={classes.btn} onClick={handleClick}> Escape </button>
+                        <button type="button" className={classes.btn} onClick={handleClick}> Escape </button>
+                        <input form="desktopSettings" className={classes.btn} type="submit" value="Save"></input>
 
                     </div>
 
