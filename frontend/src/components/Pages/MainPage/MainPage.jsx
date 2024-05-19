@@ -6,6 +6,9 @@ import MainHeader from './MainHeader';
 import  { situationText, tasksText, actionText, resultText} from "./textsData.js";
 
 export default function MainPage() {
+    fetch('/api')
+        .then(response => response.json())
+        .then(data => console.log(data))
     return(
         <>
             <Header />

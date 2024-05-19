@@ -1,1 +1,0 @@
-# Step-to-Stars-project
