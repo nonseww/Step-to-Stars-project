@@ -1,5 +1,5 @@
 import json
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from core.models import Users
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
 
@@ -10,8 +10,11 @@ jwt = JWTManager(app)
 
 @app.route('/users', methods=["GET"])
 def user_list():
-    users = db.session.execute(db.select(Users).order_by(Users.name)).scalars()
-    return users
+    # users = db.session.execute(db.select(Users).order_by(Users.name)).scalars()
+    # return users
+    users = Users.query.all()
+    for user in users:
+        return jsonify(user.email)
 
 
 @app.route("/users/register", methods=["GET", "POST"])
@@ -31,19 +34,30 @@ def user_register():
 
             db.session.add(user)
             db.session.commit()
-            return {"msg": "ok"}, 200
+            return jsonify({"msg": "ok"}), 200
         else:
-            return {"msg": "There is already such a user"}, 403
+            return jsonify({"msg": "There is already such a user"}), 403
         
 
 @app.route("/users/login", methods=["POST"])
 def create_token():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
-    find_user = db.get_or_404(Users, email)
+    find_user = Users.query.filter_by(email=email).first()
+    if (find_user is None):
+        return jsonify({"msg": "There is not user with enail {}".format(email)}), 404
+    print(find_user)
+
     if password != find_user.password:
-        return {"msg": "Wrong email or password"}, 401
+        return jsonify({"msg": "Wrong email or password"}), 401
     
     access_token = create_access_token(identity=email)
     response = {"access_token": access_token}
+    return response
+
+
+@app.route("/users/logout", methods=["POST"])
+def logout():
+    response = jsonify({"msg": "logout ok"})
+    unset_jwt_cookies(response)
     return response
