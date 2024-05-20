@@ -7,5 +7,3 @@ app = Flask(__name__)
 app.config.from_object(Configuration)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
-from core import models
