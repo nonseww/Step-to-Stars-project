@@ -1,5 +1,7 @@
 import json
 from flask import Flask, render_template, redirect, url_for, request, jsonify
+import datetime
+from pytz import timezone
 from core.models import Users
 from flask_jwt_extended import create_access_token, get_jwt, get_jwt_identity, unset_jwt_cookies, jwt_required, JWTManager
 
@@ -7,11 +9,10 @@ from core import db
 from core import app
 
 jwt = JWTManager(app)
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(hours=100)
 
 @app.route('/users', methods=["GET"])
 def user_list():
-    # users = db.session.execute(db.select(Users).order_by(Users.name)).scalars()
-    # return users
     users = Users.query.all()
     for user in users:
         return jsonify(user.email)
