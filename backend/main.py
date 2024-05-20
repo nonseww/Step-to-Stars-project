@@ -12,6 +12,7 @@ jwt = JWTManager(app)
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = datetime.timedelta(hours=100)
 
 @app.route('/users', methods=["GET"])
+@jwt_required()
 def user_list():
     users = Users.query.all()
     for user in users:

@@ -9,4 +9,5 @@ class Configuration(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or \
         "sqlite:///" + os.path.join(basedir, "data.db")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    JWT_AUTH_HEADER_PREFIX = 'Bearer'
     JWT_SECRET_KEY = "6vukfuuJUjivdhUIVRH8"
