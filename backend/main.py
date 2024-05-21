@@ -48,7 +48,6 @@ def create_token():
     find_user = Users.query.filter_by(email=email).first()
     if (find_user is None):
         return jsonify({"msg": "There is not user with enail {}".format(email)}), 404
-    print(find_user)
 
     if password != find_user.password:
         return jsonify({"msg": "Wrong email or password"}), 401
@@ -63,3 +62,7 @@ def logout():
     response = jsonify({"msg": "logout ok"})
     unset_jwt_cookies(response)
     return response
+
+@app.route("/api")
+def api():
+    return jsonify({"msg": "ok"}), 200

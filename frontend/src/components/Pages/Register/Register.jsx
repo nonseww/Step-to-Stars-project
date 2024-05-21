@@ -1,10 +1,53 @@
 import classes from './Register.module.css'; 
 import { useState } from 'react'; 
+import axios from 'axios'; 
 import { listOfFaculties } from "./listOfFaculties.js"; 
 import "../../../index.css"; 
+import useTocken from '../../useToken.js';
 
-export default function RegisterForm() {
+export default function RegisterForm(props) {
+    const { token, removeToken, setToken } = useTocken(); 
+    
     const [action, setAction] = useState("Sign In");
+
+    const [loginForm, setloginForm] = useState({
+        email: "", 
+        password: ""
+    }); 
+
+    function logMeIn(event) {
+        axios({
+            method: "POST",
+            url: "/users/login", 
+            data: {
+                email: loginForm.email,
+                password: loginForm.password
+            }
+        })
+        .then((response) => {
+            props.setToken(response.data.access_token)
+        }).catch((error) => {
+            if (error.response) {
+                console.log(error.response); 
+                console.log(error.response.status); 
+                console.log(error.response.headers); 
+            }
+        })
+
+        setloginForm(({
+            email: "", 
+            password: "", 
+        }))
+
+        event.preventDefault(); 
+        
+    }
+
+    function handleChange(event) {
+        const {value, name} = event.target; 
+        setloginForm(prevNote => ({
+            ...prevNote, [name]: value})
+        )};
 
     return(
         <form className={classes.container}>
@@ -32,9 +75,21 @@ export default function RegisterForm() {
                 </select>
             }
 
-            <input type="email" className={classes.input} placeholder="Email" name="email"></input>
+            <input onChange={handleChange}
+                type="email" 
+                className={classes.input} 
+                placeholder="Email" 
+                name="email"
+                text={loginForm.email}
+                value={loginForm.email} />
 
-            <input type="password" className={classes.input} placeholder="Password" name="password"></input>
+            <input onChange={handleChange}
+                type="password" 
+                className={classes.input} 
+                placeholder="Password" 
+                name="password"
+                text={loginForm.password}
+                value={loginForm.password} />
 
             {action==="Sign In" ? null : 
                 <input type="password" className={classes.input} placeholder="Repeat password" name="repeatPassword"></input>
@@ -44,7 +99,12 @@ export default function RegisterForm() {
 
             {action==="Sign In" ? 
                 <div className={classes.submitContainer}>
-                    <input className={classes.submitActive} type="submit" value="Sign In"></input>
+                    <input 
+                        className={classes.submitActive} 
+                        type="submit" 
+                        onClick={logMeIn}
+                        value="Sign In" />
+
                     <div className={classes.submitNoActive} onClick={() => setAction("Sign Up")}>Sign Up</div>
                 </div>
 
