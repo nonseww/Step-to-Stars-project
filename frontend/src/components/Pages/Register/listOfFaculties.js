@@ -8,7 +8,7 @@ const listOfFaculties = [
     {value: "russian_language", label: "Humanities, Russian and Foreign Lang", key: 6}, 
     {value: "bio_tech", label: "Nano- and Biomedical Technologies", key: 7}, 
     {value: "psychology", label: "Psychology", key: 8},
-    {value: "physica_cult", label: "Physical Culture and Sports", key: 9}, 
+    {value: "physical_cult", label: "Physical Culture and Sports", key: 9}, 
     {value: "philosophy", label: "Philosophy", key: 10}, 
     {value: "ecomomics", label: "Economics", key: 11}, 
     {value: "law", label: "Law", key: 12}, 

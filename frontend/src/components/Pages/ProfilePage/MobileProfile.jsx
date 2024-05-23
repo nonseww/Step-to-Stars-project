@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"; 
 import InfoString from "./InfoString";
 import classes from "./ProfilePage.module.css"; 
-import defaultImage from "../../Pictures/default_avatar.png"; 
+import defaultImage from "../../Pictures/default_avatar.jpg"; 
 import userData from "../../../userData/userData";
 import SettingsIcon from "../../Pictures/profile_settings_icon.png"; 
 
@@ -30,7 +30,7 @@ const MobileProfile = () => {
                 </div>
 
                 <div className={classes.settingsButtonContainer}>
-                    <a role="buttton" className={classes.settingsButton} onClick={handleClick}>
+                    <a role="button" className={classes.settingsButton} onClick={handleClick}>
                         <img src={SettingsIcon} alt="" style={{width: "100%", height: "100%"}}></img>
                     </a> 
                 </div>

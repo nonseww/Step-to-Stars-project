@@ -25,6 +25,7 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: max(20vw, 20vh);
 
     @media screen and (max-width: 900px) {
         width: 100%;
@@ -62,8 +63,30 @@ td{
     font-size: max(1.5vh, 2vw);
     text-align: center;
     background: white;
+    padding-top: max(2vw, 2vh);  
+    padding-bottom: max(2vw, 2vh);
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 td:nth-child(odd) {
     background-color: #dfdfff;
+}
+
+td:nth-child(1) {
+    font-weight: 700;
+}
+
+.settingsButtonContainer{
+    display: flex;
+    margin-left: auto;
+    margin-right: 4vw;
+    height: max(5vh, 5vw); 
+    width: max(5vh, 5vw);
+    right: 8vw;
+}
+
+.settingsButtonContainer a{
+    width: auto;
+    height: auto;
 }

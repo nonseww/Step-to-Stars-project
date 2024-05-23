@@ -10,11 +10,6 @@ const userData = [
         type: "text", 
     }, 
     {
-        name: "Date of registration", 
-        value: "17.05.2024",
-        type: "date", 
-    },
-    {
         name: "Age", 
         value: "", 
         type: "number", 
@@ -26,17 +21,17 @@ const userData = [
     },
     {
         name: "Faculty of", 
-        value: "kniit",
+        value: "computer_science",
         type: "text", 
     }, 
     {
         name: "Group", 
-        value: 228, 
+        value: 151, 
         type: "number", 
     },
     {
         name: "Email", 
-        value: "aaaa@yandex.ru",
+        value: "ipolituchaya@yandex.ru",
         type: "email", 
     },
     {

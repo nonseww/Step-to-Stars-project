@@ -4,7 +4,7 @@ import classes from "./SettingProfilePage.module.css";
 import UploadFile from "./UploadFile.tsx";
 import userData from "../../../userData/userData.js";
 import blacklist from "./blacklist.js";
-import defaultImage from "../../Pictures/default_avatar.png"; 
+import defaultImage from "../../Pictures/default_avatar.jpg"; 
 
 const MobileSetting = () => {
 

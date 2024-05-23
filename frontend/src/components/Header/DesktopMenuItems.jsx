@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import Dropdown from "./Dropdown"; 
-import defaultImage from "../Pictures/default_avatar.png"; 
+import defaultImage from "../Pictures/default_avatar.jpg"; 
 
-const MobileMenuItems = ({items}) => {
+const DesktopMenuItems = ({items}) => {
     const [dropdown, setDropdown] = useState(false); 
     let ref = useRef(); 
 
@@ -45,4 +45,4 @@ const MobileMenuItems = ({items}) => {
     ); 
 };
 
-export default MobileMenuItems; 
+export default DesktopMenuItems; 

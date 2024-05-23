@@ -1,17 +1,17 @@
 import { useState } from 'react'; 
 
-function useTocken() {
+function useToken() {
 
-    function getTocken(){
+    function getToken(){
         const userToken = localStorage.getItem('token');
         return userToken && userToken
     }
 
-    const [token, setToken] = useState(getTocken());
+    const [token, setToken] = useState(getToken());
 
     function saveToken(userToken) {
         localStorage.setItem('token', userToken); 
-        setToken(useTocken); 
+        setToken(useToken); 
     }; 
 
     function removeToken() {
@@ -26,4 +26,4 @@ function useTocken() {
     }
 }
 
-export default useTocken; 
+export default useToken; 

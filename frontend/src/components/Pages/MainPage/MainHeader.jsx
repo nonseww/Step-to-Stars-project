@@ -12,7 +12,7 @@ const MainHeader = () => {
 
             <div className={classes.mainUnderTitleContainer}>
                 <div className={classes.mainUnderText}>
-                Because every day you find yourself in different <strong>Situations</strong> and resolutely take on 
+                Because every day you find yourself in different <strong>Situations</strong> and fearlessly take on 
                 the assigned <strong>Tasks</strong>. With every <strong>Action</strong> you take, step by step, 
                 you bring yourself closer to your desired <strong>Result</strong>.
                 </div>

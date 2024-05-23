@@ -21,7 +21,7 @@ export const DesktopMenuItemsData = [
             }, 
             {
                 title: "Log out", 
-                url: "/"
+                url: "/log out"
             }
         ] 
     }
